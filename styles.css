@@ -1,0 +1,453 @@
+/* ============================
+   RESET
+============================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============================
+   BODY
+============================ */
+
+body {
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    background-color: #eef3f8;
+    color: #223;
+    line-height: 1.5;
+}
+
+/* ============================
+   NAVBAR
+============================ */
+
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    width: 100%;
+    background: linear-gradient(90deg, #0057b8, #0084e6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.20);
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    display: block;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+    font-size: 1.02rem;
+    display: inline-block;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+.nav-links li a.active {
+    background-color: #1ea7ff;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* ============================
+   MAIN
+============================ */
+
+.contenido {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* ============================
+   TITULO PRINCIPAL
+============================ */
+
+.titulo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo h1 {
+    font-size: 3rem;
+    color: #0b1d45;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.titulo p {
+    font-size: 1.25rem;
+    color: #394b6a;
+    margin-top: 6px;
+}
+
+.linea {
+    width: 90px;
+    height: 5px;
+    background: #1ea7ff;
+    margin: 18px auto 0 auto;
+    border-radius: 10px;
+}
+
+/* ============================
+   TARJETAS (cards)
+============================ */
+
+.tarjeta {
+    background-color: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+    margin-bottom: 32px;
+}
+
+.seccion-extra {
+    border-top: 4px solid #1ea7ff;
+}
+
+.imagen-estacion {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+.info {
+    padding: 35px;
+}
+
+.info h2 {
+    color: #0057b8;
+    margin-bottom: 18px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.info p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    color: #333;
+}
+
+/* ============================
+   DATOS RAPIDOS
+============================ */
+
+.datos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+    margin-top: 24px;
+}
+
+.dato {
+    background-color: #eaf5ff;
+    border-left: 6px solid #149eea;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.dato h3 {
+    color: #0057b8;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.dato p {
+    font-size: 1rem;
+    color: #394b6a;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ============================
+   RECORRIDO (paradas)
+============================ */
+
+.recorrido {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin: 22px 0;
+    align-items: stretch;
+}
+
+.parada {
+    background: #f5f9ff;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.parada:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.parada-label {
+    display: block;
+    font-size: 0.85rem;
+    color: #556677;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.parada strong {
+    font-size: 1.25rem;
+    color: #0b1d45;
+    display: block;
+}
+
+.parada-actual {
+    background: linear-gradient(180deg, #0057b8, #0084e6);
+    border-color: #1ea7ff;
+}
+
+.parada-actual .parada-label,
+.parada-actual strong {
+    color: white;
+}
+
+.nota-recorrido {
+    font-size: 0.98rem;
+    color: #556677;
+    font-style: italic;
+    margin-top: 16px;
+}
+
+/* ============================
+   TABLA DE HORARIOS
+============================ */
+
+.tabla-horarios {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    margin-top: 16px;
+}
+
+.tabla-horarios thead {
+    background: linear-gradient(90deg, #0057b8, #0084e6);
+}
+
+.tabla-horarios thead th {
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    font-size: 1.02rem;
+    font-weight: 700;
+}
+
+.tabla-horarios tbody td {
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    color: #223;
+    font-size: 1rem;
+}
+
+.tabla-horarios tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.tabla-horarios tbody tr:nth-child(even) {
+    background: #f5f9ff;
+}
+
+/* ============================
+   MAPA
+============================ */
+
+.mapa-contenedor {
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.mapa-contenedor iframe {
+    width: 100%;
+    height: 420px;
+    border: 0;
+    display: block;
+}
+
+/* ============================
+   BOTON VOLVER
+============================ */
+
+.acciones {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.boton-volver {
+    display: inline-block;
+    background: linear-gradient(90deg, #0057b8, #0084e6);
+    color: white;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.02rem;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.boton-volver:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.20);
+}
+
+.boton-volver:focus {
+    outline: 3px solid #ffd400;
+    outline-offset: 2px;
+}
+
+/* ============================
+   FOOTER
+============================ */
+
+footer {
+    margin-top: 60px;
+    text-align: center;
+    padding: 22px 16px;
+    background-color: #0057b8;
+    color: white;
+    font-size: 0.95rem;
+}
+
+/* ============================
+   ACCESIBILIDAD (foco visible)
+============================ */
+
+a:focus,
+.nav-links li a:focus {
+    outline: 3px solid #ffd400;
+    outline-offset: 2px;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+
+@media (max-width: 900px) {
+
+    .titulo h1 {
+        font-size: 2.2rem;
+    }
+
+    .info h2 {
+        font-size: 1.6rem;
+    }
+
+    .imagen-estacion {
+        height: 320px;
+    }
+
+    .info {
+        padding: 25px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 14px;
+        padding: 14px 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 10px 16px;
+    }
+
+    .titulo h1 {
+        font-size: 1.9rem;
+    }
+
+    .imagen-estacion {
+        height: 240px;
+    }
+
+    .mapa-contenedor iframe {
+        height: 320px;
+    }
+
+    .tabla-horarios thead th,
+    .tabla-horarios tbody td {
+        padding: 10px 12px;
+        font-size: 0.92rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .contenido {
+        padding: 24px 12px;
+    }
+
+    .info {
+        padding: 20px;
+    }
+
+    .titulo h1 {
+        font-size: 1.6rem;
+    }
+
+    .info h2 {
+        font-size: 1.35rem;
+    }
+
+}
