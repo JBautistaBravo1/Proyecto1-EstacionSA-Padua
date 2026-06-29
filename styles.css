@@ -451,3 +451,282 @@ a:focus,
     }
 
 }
+
+/* ============================
+   CONTROLES DE PERSONALIZACION (navbar)
+============================ */
+
+.controles {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.ctrl-btn {
+    background-color: rgba(255, 255, 255, 0.18);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    line-height: 1;
+}
+
+.ctrl-btn:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+.ctrl-btn:focus {
+    outline: 3px solid #ffd400;
+    outline-offset: 2px;
+}
+
+/* ============================
+   ICONOS EN DATOS Y PARADAS
+============================ */
+
+.dato-icono,
+.parada-icono {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eaf5ff;
+    border-radius: 12px;
+}
+
+.dato-icono svg,
+.parada-icono svg {
+    width: 24px;
+    height: 24px;
+    fill: #0057b8;
+}
+
+.parada-icono {
+    margin: 0 auto 10px auto;
+    background: rgba(0, 87, 184, 0.10);
+}
+
+.parada-actual .parada-icono {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.parada-actual .parada-icono svg {
+    fill: white;
+}
+
+/* ============================
+   GALERIA
+============================ */
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.galeria-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+}
+
+.galeria-img:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+}
+
+/* ============================
+   LIGHTBOX
+============================ */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.lightbox.abierto {
+    display: flex;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-cerrar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 2.6rem;
+    font-weight: 700;
+    cursor: pointer;
+    line-height: 1;
+    user-select: none;
+}
+
+.lightbox-cerrar:focus {
+    outline: 3px solid #ffd400;
+    outline-offset: 2px;
+}
+
+/* ============================
+   FILTROS DE HORARIOS
+============================ */
+
+.filtros-horarios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 16px 0;
+}
+
+.filtro-btn {
+    background: #eaf5ff;
+    color: #0057b8;
+    border: 2px solid #149eea;
+    border-radius: 10px;
+    padding: 8px 18px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.filtro-btn:hover {
+    background: #d4ecff;
+}
+
+.filtro-btn.activo {
+    background: linear-gradient(90deg, #0057b8, #0084e6);
+    color: white;
+    border-color: #0057b8;
+}
+
+.filtro-btn:focus {
+    outline: 3px solid #ffd400;
+    outline-offset: 2px;
+}
+
+/* ============================
+   MODO OSCURO
+============================ */
+
+body.modo-oscuro {
+    background-color: #0d1320;
+    color: #e6ecf5;
+}
+
+body.modo-oscuro .titulo h1 {
+    color: #eaf2ff;
+}
+
+body.modo-oscuro .titulo p {
+    color: #9fb3d1;
+}
+
+body.modo-oscuro .tarjeta {
+    background-color: #161f33;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+}
+
+body.modo-oscuro .info p {
+    color: #c3cee0;
+}
+
+body.modo-oscuro .info h2 {
+    color: #4ea8ff;
+}
+
+body.modo-oscuro .dato {
+    background-color: #1d2842;
+    border-left-color: #4ea8ff;
+}
+
+body.modo-oscuro .dato h3 {
+    color: #6fb6ff;
+}
+
+body.modo-oscuro .dato p {
+    color: #aebdd6;
+}
+
+body.modo-oscuro .dato-icono {
+    background: #24304d;
+}
+
+body.modo-oscuro .dato-icono svg {
+    fill: #6fb6ff;
+}
+
+body.modo-oscuro .parada {
+    background: #1d2842;
+}
+
+body.modo-oscuro .parada strong {
+    color: #eaf2ff;
+}
+
+body.modo-oscuro .parada-label {
+    color: #9fb3d1;
+}
+
+body.modo-oscuro .tabla-horarios {
+    background: #161f33;
+}
+
+body.modo-oscuro .tabla-horarios tbody td {
+    color: #d4ddec;
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+body.modo-oscuro .tabla-horarios tbody tr:nth-child(even) {
+    background: #1d2842;
+}
+
+body.modo-oscuro .filtro-btn {
+    background: #1d2842;
+    color: #6fb6ff;
+    border-color: #2f6db5;
+}
+
+body.modo-oscuro .filtro-btn.activo {
+    color: white;
+}
+
+body.modo-oscuro .nota-recorrido {
+    color: #9fb3d1;
+}
+
+/* ============================
+   RESPONSIVE (controles)
+============================ */
+
+@media (max-width: 768px) {
+
+    .controles {
+        justify-content: center;
+        width: 100%;
+        order: 3;
+    }
+
+}

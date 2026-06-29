@@ -20,7 +20,8 @@
 
             <div class="logo">
 
-                <img src="https://joaquinhaedo.github.io/trabajoGrupalDIDW/img/iconotrensarmiento.png" alt="Icono Tren Sarmiento">
+                <img src="https://joaquinhaedo.github.io/trabajoGrupalDIDW/img/iconotrensarmiento.png"
+                    alt="Icono Tren Sarmiento">
 
             </div>
 
@@ -58,6 +59,18 @@
 
             </ul>
 
+            <!-- CONTROLES DE PERSONALIZACION (JS) -->
+            <div class="controles" aria-label="Opciones de personalización">
+
+                <button id="btn-texto-menos" class="ctrl-btn" type="button" title="Reducir tamaño de texto"
+                    aria-label="Reducir tamaño de texto">A-</button>
+                <button id="btn-texto-mas" class="ctrl-btn" type="button" title="Aumentar tamaño de texto"
+                    aria-label="Aumentar tamaño de texto">A+</button>
+                <button id="btn-tema" class="ctrl-btn" type="button" title="Cambiar modo claro/oscuro"
+                    aria-label="Cambiar modo claro u oscuro">🌙</button>
+
+            </div>
+
         </nav>
 
     </header>
@@ -87,9 +100,8 @@
         <section class="tarjeta">
 
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Estación_Padua_2022_%2812%29.jpg/1920px-Estación_Padua_2022_%2812%29.jpg"
-                 alt="Estación San Antonio de Padua"
-                 class="imagen-estacion"
-                 onerror="this.onerror=null;this.src='https://joaquinhaedo.github.io/trabajoGrupalDIDW/img/trenes.jpg';">
+                alt="Estación San Antonio de Padua" class="imagen-estacion"
+                onerror="this.onerror=null;this.src='https://joaquinhaedo.github.io/trabajoGrupalDIDW/img/trenes.jpg';">
 
             <div class="info">
 
@@ -117,24 +129,80 @@
                 <div class="datos">
 
                     <div class="dato">
+                        <div class="dato-icono">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" />
+                            </svg>
+                        </div>
                         <h3>Ubicación</h3>
                         <p>San Antonio de Padua, Partido de Merlo, Buenos Aires</p>
                     </div>
 
                     <div class="dato">
+                        <div class="dato-icono">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M4 15.5C4 17.43 5.57 19 7.5 19L6 20.5v.5h12v-.5L16.5 19c1.93 0 3.5-1.57 3.5-3.5V6c0-3.5-3.58-4-8-4s-8 .5-8 4v9.5zM12 17a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm6-7H6V6h12v4z" />
+                            </svg>
+                        </div>
                         <h3>Línea</h3>
                         <p>Tren Sarmiento (Once - Moreno)</p>
                     </div>
 
                     <div class="dato">
+                        <div class="dato-icono">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                            </svg>
+                        </div>
                         <h3>Conexiones</h3>
                         <p>Colectivos y combis hacia Merlo, Moreno e Ituzaingó</p>
                     </div>
 
                     <div class="dato">
+                        <div class="dato-icono">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-5-5 1.41-1.41L11 13.17l6.59-6.59L19 8l-8 9z" />
+                            </svg>
+                        </div>
                         <h3>Estado</h3>
                         <p>Servicio activo</p>
                     </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- GALERIA DE IMAGENES (JS lightbox) -->
+
+        <section class="tarjeta seccion-extra">
+
+            <div class="info">
+
+                <h2>
+                    Galería de la estación
+                </h2>
+
+                <p>
+                    Imágenes de la estación San Antonio de Padua y del servicio
+                    de la Línea Sarmiento. Hacé clic en cualquier imagen para
+                    ampliarla.
+                </p>
+
+                <div class="galeria">
+
+                    <img class="galeria-img"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Estación_Padua_2022_%2812%29.jpg/640px-Estación_Padua_2022_%2812%29.jpg"
+                        alt="Andén de la estación San Antonio de Padua"
+                        onerror="this.onerror=null;this.src='img/anden2.jpg';">
+
+                    <img class="galeria-img" src="img/formacion.png" alt="Formación de la Línea Sarmiento">
+
+                    <img class="galeria-img" src="img/imagen3.jpeg" alt="Ascensor de la estacion San Antonio de Padua">
 
                 </div>
 
@@ -161,16 +229,32 @@
                 <div class="recorrido">
 
                     <div class="parada">
+                        <div class="parada-icono">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                            </svg>
+                        </div>
                         <span class="parada-label">Anterior</span>
                         <strong>Ituzaingó</strong>
                     </div>
 
                     <div class="parada parada-actual">
+                        <div class="parada-icono">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" />
+                            </svg>
+                        </div>
                         <span class="parada-label">Estación actual</span>
                         <strong>San Antonio de Padua</strong>
                     </div>
 
                     <div class="parada">
+                        <div class="parada-icono">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" />
+                            </svg>
+                        </div>
                         <span class="parada-label">Siguiente</span>
                         <strong>Merlo</strong>
                     </div>
@@ -187,7 +271,7 @@
 
         </section>
 
-        <!-- HORARIOS -->
+        <!-- HORARIOS (JS: filtro por tipo de dia) -->
 
         <section class="tarjeta seccion-extra">
 
@@ -199,9 +283,15 @@
 
                 <p>
                     El servicio del Tren Sarmiento opera todos los días de la
-                    semana. A continuación se detallan los horarios y la
-                    frecuencia aproximada en la estación San Antonio de Padua.
+                    semana. Filtrá la tabla para ver únicamente los horarios
+                    que te interesan.
                 </p>
+
+                <div class="filtros-horarios" role="group" aria-label="Filtrar horarios por tipo de día">
+                    <button class="filtro-btn activo" type="button" data-filtro="todos">Todos</button>
+                    <button class="filtro-btn" type="button" data-filtro="semana">Lunes a viernes</button>
+                    <button class="filtro-btn" type="button" data-filtro="finde">Fines de semana</button>
+                </div>
 
                 <table class="tabla-horarios">
 
@@ -215,25 +305,25 @@
 
                     <tbody>
 
-                        <tr>
+                        <tr data-tipo="semana">
                             <td>Lunes a viernes (hora pico)</td>
                             <td>06:00 – 09:30 / 17:00 – 20:00</td>
                             <td>Cada 6 a 10 minutos</td>
                         </tr>
 
-                        <tr>
+                        <tr data-tipo="semana">
                             <td>Lunes a viernes (resto del día)</td>
                             <td>09:30 – 17:00 / 20:00 – 23:30</td>
                             <td>Cada 15 a 20 minutos</td>
                         </tr>
 
-                        <tr>
+                        <tr data-tipo="finde">
                             <td>Sábados</td>
                             <td>05:30 – 00:00</td>
                             <td>Cada 20 minutos</td>
                         </tr>
 
-                        <tr>
+                        <tr data-tipo="finde">
                             <td>Domingos y feriados</td>
                             <td>06:00 – 23:30</td>
                             <td>Cada 25 a 30 minutos</td>
@@ -273,8 +363,7 @@
 
                     <iframe
                         src="https://www.openstreetmap.org/export/embed.html?bbox=-58.7245%2C-34.6753%2C-58.6945%2C-34.6553&amp;layer=mapnik&amp;marker=-34.6653%2C-58.7095"
-                        title="Mapa de la Estación San Antonio de Padua"
-                        loading="lazy"
+                        title="Mapa de la Estación San Antonio de Padua" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
 
@@ -308,31 +397,62 @@
                 <div class="datos">
 
                     <div class="dato">
+                        <div class="dato-icono">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M3 18h18v2H3v-2zm2-3h14l-3-7H8l-3 7zm7-11a2 2 0 110 4 2 2 0 010-4z" />
+                            </svg>
+                        </div>
                         <h3>Rampas de acceso</h3>
                         <p>Ingreso al andén sin escalones para sillas de ruedas y carritos.</p>
                     </div>
 
                     <div class="dato">
+                        <div class="dato-icono">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 2a3 3 0 100 6 3 3 0 000-6zm-7 9h4v11h2v-6h2v6h2V11h4V9H5v2z" />
+                            </svg>
+                        </div>
                         <h3>Espacios reservados</h3>
                         <p>Lugares preferenciales para personas con movilidad reducida dentro de los coches.</p>
                     </div>
 
                     <div class="dato">
+                        <div class="dato-icono">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M3 5h18v3H3V5zm0 5h12v3H3v-3zm0 5h18v3H3v-3z" />
+                            </svg>
+                        </div>
                         <h3>Señalización clara</h3>
                         <p>Carteles con tipografía legible, alto contraste y pictogramas universales.</p>
                     </div>
 
                     <div class="dato">
+                        <div class="dato-icono">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 3v10.55A4 4 0 1014 17V7h4V3h-6z" />
+                            </svg>
+                        </div>
                         <h3>Información visual y sonora</h3>
                         <p>Anuncios por altavoz y pantallas con próximos arribos.</p>
                     </div>
 
                     <div class="dato">
+                        <div class="dato-icono">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 4h16v4H4V4zm0 6h16v10H4V10zm3 3v4h4v-4H7z" />
+                            </svg>
+                        </div>
                         <h3>Boletería accesible</h3>
                         <p>Ventanilla a baja altura y máquinas expendedoras con pantalla amplia.</p>
                     </div>
 
                     <div class="dato">
+                        <div class="dato-icono">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5C15 14.17 10.33 13 8 13zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+                            </svg>
+                        </div>
                         <h3>Asistencia al pasajero</h3>
                         <p>Personal capacitado para asistir a personas mayores y con discapacidad.</p>
                     </div>
@@ -355,6 +475,14 @@
 
     </main>
 
+    <!-- LIGHTBOX (JS) -->
+
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <span class="lightbox-cerrar" id="lightbox-cerrar" role="button" tabindex="0"
+            aria-label="Cerrar imagen">&times;</span>
+        <img id="lightbox-img" class="lightbox-img" src="" alt="Imagen ampliada">
+    </div>
+
     <!-- FOOTER -->
 
     <footer>
@@ -365,6 +493,8 @@
         </p>
 
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 
